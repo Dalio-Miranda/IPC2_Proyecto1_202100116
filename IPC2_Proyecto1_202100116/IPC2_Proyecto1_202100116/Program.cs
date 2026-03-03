@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using IPC2_Proyecto1.IO;
 using IPC2_Proyecto1.Logic;
 using IPC2_Proyecto1.Models;

@@ -12,3 +12,4 @@ C:\Users\DAMG USAC\source\repos\IPC2_Proyecto1_202100116\IPC2_Proyecto1_20210011
 C:\Users\DAMG USAC\source\repos\IPC2_Proyecto1_202100116\IPC2_Proyecto1_202100116\IPC2_Proyecto1_202100116\obj\Debug\net10.0\IPC2_Proyecto1_202100116.pdb
 C:\Users\DAMG USAC\source\repos\IPC2_Proyecto1_202100116\IPC2_Proyecto1_202100116\IPC2_Proyecto1_202100116\obj\Debug\net10.0\IPC2_Proyecto1_202100116.genruntimeconfig.cache
 C:\Users\DAMG USAC\source\repos\IPC2_Proyecto1_202100116\IPC2_Proyecto1_202100116\IPC2_Proyecto1_202100116\obj\Debug\net10.0\ref\IPC2_Proyecto1_202100116.dll
+C:\Users\DAMG USAC\source\repos\IPC2_Proyecto1_202100116\IPC2_Proyecto1_202100116\IPC2_Proyecto1_202100116\obj\Debug\net10.0\IPC2_Proyecto1_202100116.sourcelink.json
