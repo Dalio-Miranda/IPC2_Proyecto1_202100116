@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\DAMG USAC\\source\\repos\\IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0D6C3B4E-0B03-B7A8-C371-48A00801A891}|IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116.csproj|c:\\users\\damg usac\\source\\repos\\ipc2_proyecto1_202100116\\ipc2_proyecto1_202100116\\ipc2_proyecto1_202100116\\logic\\generadorgraphviz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D6C3B4E-0B03-B7A8-C371-48A00801A891}|IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116.csproj|solutionrelative:ipc2_proyecto1_202100116\\logic\\generadorgraphviz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0D6C3B4E-0B03-B7A8-C371-48A00801A891}|IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116.csproj|c:\\users\\damg usac\\source\\repos\\ipc2_proyecto1_202100116\\ipc2_proyecto1_202100116\\ipc2_proyecto1_202100116\\structures\\nodo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0D6C3B4E-0B03-B7A8-C371-48A00801A891}|IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116.csproj|solutionrelative:ipc2_proyecto1_202100116\\structures\\nodo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -31,6 +35,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "GeneradorGraphviz.cs",
+              "DocumentMoniker": "C:\\Users\\DAMG USAC\\source\\repos\\IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116\\Logic\\GeneradorGraphviz.cs",
+              "RelativeDocumentMoniker": "IPC2_Proyecto1_202100116\\Logic\\GeneradorGraphviz.cs",
+              "ToolTip": "C:\\Users\\DAMG USAC\\source\\repos\\IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116\\Logic\\GeneradorGraphviz.cs",
+              "RelativeToolTip": "IPC2_Proyecto1_202100116\\Logic\\GeneradorGraphviz.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwCcAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T03:24:45.308Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Nodo.cs",
               "DocumentMoniker": "C:\\Users\\DAMG USAC\\source\\repos\\IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116\\Structures\\Nodo.cs",
               "RelativeDocumentMoniker": "IPC2_Proyecto1_202100116\\Structures\\Nodo.cs",
@@ -43,7 +60,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\DAMG USAC\\source\\repos\\IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116\\Program.cs",
               "RelativeDocumentMoniker": "IPC2_Proyecto1_202100116\\Program.cs",
@@ -55,7 +72,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Rejilla.cs",
               "DocumentMoniker": "C:\\Users\\DAMG USAC\\source\\repos\\IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116\\Models\\Rejilla.cs",
               "RelativeDocumentMoniker": "IPC2_Proyecto1_202100116\\Models\\Rejilla.cs",
@@ -63,12 +80,11 @@
               "RelativeToolTip": "IPC2_Proyecto1_202100116\\Models\\Rejilla.cs",
               "ViewState": "AgIAAK0AAAAAAAAAAAAYwMYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-01T04:54:30.936Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-01T04:54:30.936Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "IPC2_Proyecto1_202100116.csproj",
               "DocumentMoniker": "C:\\Users\\DAMG USAC\\source\\repos\\IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116.csproj",
               "RelativeDocumentMoniker": "IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116.csproj",
@@ -76,8 +92,7 @@
               "RelativeToolTip": "IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-03-01T04:05:58.93Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-01T04:05:58.93Z"
             }
           ]
         }

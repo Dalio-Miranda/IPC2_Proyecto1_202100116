@@ -1,0 +1,23 @@
+digraph Rejilla {
+  rankdir=TB;
+  node [shape=none, margin=0];
+  label="Paciente: Maria_Garcia | Periodo: 2 | Sanas: 97 | Contagiadas: 3";
+  labelloc=top;
+  fontsize=14;
+
+  rejilla [label=<
+    <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+      <TR><TD BGCOLOR="gray"><B>F/C</B></TD><TD BGCOLOR="gray"><B>1</B></TD><TD BGCOLOR="gray"><B>2</B></TD><TD BGCOLOR="gray"><B>3</B></TD><TD BGCOLOR="gray"><B>4</B></TD><TD BGCOLOR="gray"><B>5</B></TD><TD BGCOLOR="gray"><B>6</B></TD><TD BGCOLOR="gray"><B>7</B></TD><TD BGCOLOR="gray"><B>8</B></TD><TD BGCOLOR="gray"><B>9</B></TD><TD BGCOLOR="gray"><B>10</B></TD></TR>
+      <TR><TD BGCOLOR="gray"><B>1</B></TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD></TR>
+      <TR><TD BGCOLOR="gray"><B>2</B></TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD></TR>
+      <TR><TD BGCOLOR="gray"><B>3</B></TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD></TR>
+      <TR><TD BGCOLOR="gray"><B>4</B></TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD></TR>
+      <TR><TD BGCOLOR="gray"><B>5</B></TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="#4472C4"> </TD><TD BGCOLOR="#4472C4"> </TD><TD BGCOLOR="#4472C4"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD></TR>
+      <TR><TD BGCOLOR="gray"><B>6</B></TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD></TR>
+      <TR><TD BGCOLOR="gray"><B>7</B></TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD></TR>
+      <TR><TD BGCOLOR="gray"><B>8</B></TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD></TR>
+      <TR><TD BGCOLOR="gray"><B>9</B></TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD></TR>
+      <TR><TD BGCOLOR="gray"><B>10</B></TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD><TD BGCOLOR="white"> </TD></TR>
+    </TABLE>
+  >];
+}

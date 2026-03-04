@@ -7,42 +7,65 @@ namespace IPC2_Proyecto1.Logic
 {
     /// <summary>
     /// Genera archivos .dot de Graphviz para visualizar la rejilla de un paciente.
-    /// Utiliza HTML-like labels para representar la rejilla como tabla.
     /// </summary>
     public class GeneradorGraphviz
     {
-        /// <summary>
-        /// Genera el archivo .dot y luego llama a Graphviz para producir el PNG.
-        /// </summary>
+        private const string RutaDot = @"C:\Program Files\Graphviz\bin\dot.exe";
+
         public void Generar(Paciente paciente, string carpetaSalida = ".")
         {
+            // Crear carpeta si no existe
+            if (!Directory.Exists(carpetaSalida))
+                Directory.CreateDirectory(carpetaSalida);
+
             string nombreBase = $"rejilla_{LimpiarNombre(paciente.Nombre)}_periodo{paciente.PeriodoActual}";
             string rutaDot = Path.Combine(carpetaSalida, nombreBase + ".dot");
             string rutaPng = Path.Combine(carpetaSalida, nombreBase + ".png");
 
             string contenidoDot = GenerarDot(paciente);
-            File.WriteAllText(rutaDot, contenidoDot, Encoding.UTF8);
+            File.WriteAllText(rutaDot, contenidoDot, new UTF8Encoding(false));
+            Console.WriteLine($"[OK] Archivo .dot generado: {rutaDot}");
 
-            // Intentar generar el PNG con Graphviz instalado
+            if (!File.Exists(RutaDot))
+            {
+                Console.WriteLine($"[ERROR] No se encontro Graphviz en: {RutaDot}");
+                return;
+            }
+
             try
             {
                 var proceso = new System.Diagnostics.Process();
-                proceso.StartInfo.FileName = "dot";
+                proceso.StartInfo.FileName = RutaDot;
                 proceso.StartInfo.Arguments = $"-Tpng \"{rutaDot}\" -o \"{rutaPng}\"";
                 proceso.StartInfo.UseShellExecute = false;
                 proceso.StartInfo.RedirectStandardError = true;
+                proceso.StartInfo.RedirectStandardOutput = true;
+                proceso.StartInfo.CreateNoWindow = true;
                 proceso.Start();
                 proceso.WaitForExit();
-                if (proceso.ExitCode == 0)
-                    Console.WriteLine($"[OK] Imagen generada: {rutaPng}");
+
+                string errOutput = proceso.StandardError.ReadToEnd();
+
+                if (File.Exists(rutaPng))
+                {
+                    Console.WriteLine($"[OK] Imagen PNG generada: {rutaPng}");
+                    // Abrir automaticamente
+                    System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+                    {
+                        FileName = rutaPng,
+                        UseShellExecute = true
+                    });
+                }
                 else
-                    Console.WriteLine($"[INFO] Archivo .dot generado: {rutaDot} (instala Graphviz para generar PNG)");
+                {
+                    Console.WriteLine($"[ERROR] No se genero el PNG.");
+                    if (!string.IsNullOrEmpty(errOutput))
+                        Console.WriteLine($"        Detalle: {errOutput}");
+                }
             }
-            catch
+            catch (Exception ex)
             {
-                Console.WriteLine($"[INFO] Archivo .dot generado: {rutaDot}");
-                Console.WriteLine("       Graphviz no encontrado. Instálalo y ejecuta:");
-                Console.WriteLine($"       dot -Tpng \"{rutaDot}\" -o \"{rutaPng}\"");
+                Console.WriteLine($"[ERROR] {ex.Message}");
             }
         }
 
@@ -55,20 +78,20 @@ namespace IPC2_Proyecto1.Logic
             sb.AppendLine("digraph Rejilla {");
             sb.AppendLine("  rankdir=TB;");
             sb.AppendLine("  node [shape=none, margin=0];");
-            sb.AppendLine($"  label=\"Paciente: {paciente.Nombre} | Período: {paciente.PeriodoActual} | Sanas: {r.TotalSanas} | Contagiadas: {r.TotalContagiadas}\";");
+            sb.AppendLine($"  label=\"Paciente: {LimpiarNombre(paciente.Nombre)} | Periodo: {paciente.PeriodoActual} | Sanas: {r.TotalSanas} | Contagiadas: {r.TotalContagiadas}\";");
             sb.AppendLine("  labelloc=top;");
             sb.AppendLine("  fontsize=14;");
             sb.AppendLine();
             sb.AppendLine("  rejilla [label=<");
             sb.AppendLine("    <TABLE BORDER=\"1\" CELLBORDER=\"1\" CELLSPACING=\"0\" CELLPADDING=\"4\">");
 
-            // Encabezado de columnas
-            sb.Append("      <TR><TD BGCOLOR=\"gray\"><B>F\\C</B></TD>");
+            // Encabezado columnas
+            sb.Append("      <TR><TD BGCOLOR=\"gray\"><B>F/C</B></TD>");
             for (int c = 1; c <= m; c++)
                 sb.Append($"<TD BGCOLOR=\"gray\"><B>{c}</B></TD>");
             sb.AppendLine("</TR>");
 
-            // Filas de la rejilla
+            // Filas
             for (int f = 0; f < m; f++)
             {
                 sb.Append($"      <TR><TD BGCOLOR=\"gray\"><B>{f + 1}</B></TD>");
@@ -89,11 +112,21 @@ namespace IPC2_Proyecto1.Logic
 
         private string LimpiarNombre(string nombre)
         {
-            // Eliminar caracteres no válidos para nombre de archivo
+            nombre = nombre.Replace("é", "e").Replace("á", "a")
+                           .Replace("í", "i").Replace("ó", "o")
+                           .Replace("ú", "u").Replace("ñ", "n")
+                           .Replace("É", "E").Replace("Á", "A")
+                           .Replace("Í", "I").Replace("Ó", "O")
+                           .Replace("Ú", "U").Replace("Ñ", "N")
+                           .Replace("ü", "u").Replace("Ü", "U");
             StringBuilder sb = new StringBuilder();
             foreach (char c in nombre)
+            {
                 if (char.IsLetterOrDigit(c) || c == '_')
                     sb.Append(c);
+                else if (c == ' ')
+                    sb.Append('_');
+            }
             return sb.Length > 0 ? sb.ToString() : "paciente";
         }
     }
