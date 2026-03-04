@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pacientes>
+  <!-- Paciente 1: Patrón estático (mortal, N=1) -->
+  <paciente>
+    <datospersonales>
+      <nombre>Juan Pérez</nombre>
+      <edad>35</edad>
+    </datospersonales>
+    <periodos>100</periodos>
+    <m>10</m>
+    <rejilla>
+      <celda f="5" c="1"/>
+      <celda f="5" c="2"/>
+      <celda f="5" c="3"/>
+      <celda f="6" c="8"/>
+      <celda f="6" c="9"/>
+      <celda f="6" c="10"/>
+      <celda f="9" c="5"/>
+      <celda f="9" c="6"/>
+      <celda f="10" c="5"/>
+      <celda f="10" c="6"/>
+    </rejilla>
+  </paciente>
+
+  <!-- Paciente 2: Blinker (oscilador período 2 → grave, N=2) -->
+  <paciente>
+    <datospersonales>
+      <nombre>María García</nombre>
+      <edad>28</edad>
+    </datospersonales>
+    <periodos>50</periodos>
+    <m>10</m>
+    <rejilla>
+      <celda f="5" c="4"/>
+      <celda f="5" c="5"/>
+      <celda f="5" c="6"/>
+    </rejilla>
+  </paciente>
+</pacientes>

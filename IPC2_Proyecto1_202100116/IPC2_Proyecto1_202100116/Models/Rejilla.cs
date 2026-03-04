@@ -4,56 +4,111 @@ using System.Text;
 namespace IPC2_Proyecto1.Models
 {
     /// <summary>
-    /// Rejilla cuadrada M x M que almacena las celdas en una lista enlazada.
-    /// Usa un arreglo 2D internamente para acceso O(1), pero expone también
-    /// la lista enlazada para cumplir el requisito de TDA.
+    /// Rejilla cuadrada M x M implementada completamente con listas enlazadas.
+    /// NO usa arrays ni diccionarios nativos de C#.
     /// </summary>
     public class Rejilla
     {
         private readonly int m;
-        private readonly bool[,] estado; // true = contagiada
-        public ListaEnlazada<Celda> CeldasContagiadas { get; private set; }
+        // Lista enlazada de filas, cada fila es una lista enlazada de booleanos
+        private ListaEnlazada<ListaEnlazada<bool>> filas;
 
         public int M => m;
         public int TotalContagiadas => ContarContagiadas();
         public int TotalSanas => (m * m) - TotalContagiadas;
+        public ListaEnlazada<Celda> CeldasContagiadas { get; private set; }
 
         public Rejilla(int m)
         {
             this.m = m;
-            estado = new bool[m, m];
+            filas = new ListaEnlazada<ListaEnlazada<bool>>();
             CeldasContagiadas = new ListaEnlazada<Celda>();
+
+            // Inicializar todas las celdas en false (sanas)
+            for (int f = 0; f < m; f++)
+            {
+                ListaEnlazada<bool> fila = new ListaEnlazada<bool>();
+                for (int c = 0; c < m; c++)
+                    fila.AgregarFinal(false);
+                filas.AgregarFinal(fila);
+            }
         }
 
         /// <summary>Constructor copia</summary>
         public Rejilla(Rejilla origen)
         {
             this.m = origen.m;
-            estado = new bool[m, m];
+            filas = new ListaEnlazada<ListaEnlazada<bool>>();
             CeldasContagiadas = new ListaEnlazada<Celda>();
-            for (int f = 0; f < m; f++)
-                for (int c = 0; c < m; c++)
-                    estado[f, c] = origen.estado[f, c];
+
+            // Copiar cada fila
+            Nodo<ListaEnlazada<bool>> nodoFila = origen.filas.Cabeza;
+            while (nodoFila != null)
+            {
+                ListaEnlazada<bool> nuevaFila = new ListaEnlazada<bool>();
+                Nodo<bool> nodoCol = nodoFila.Dato.Cabeza;
+                while (nodoCol != null)
+                {
+                    nuevaFila.AgregarFinal(nodoCol.Dato);
+                    nodoCol = nodoCol.Siguiente;
+                }
+                filas.AgregarFinal(nuevaFila);
+                nodoFila = nodoFila.Siguiente;
+            }
             ReconstruirLista();
+        }
+
+        /// <summary>Obtiene el valor de una celda (base 0 interna)</summary>
+        private bool ObtenerValor(int fila, int col)
+        {
+            return filas.ObtenerEn(fila).ObtenerEn(col);
+        }
+
+        /// <summary>Establece el valor de una celda (base 0 interna)</summary>
+        private void EstablecerValor(int fila, int col, bool valor)
+        {
+            ListaEnlazada<bool> filaLista = filas.ObtenerEn(fila);
+            // Recorrer hasta la posición y actualizar
+            Nodo<bool> actual = filaLista.Cabeza;
+            int indice = 0;
+            while (actual != null)
+            {
+                if (indice == col)
+                {
+                    actual.Dato = valor;
+                    return;
+                }
+                actual = actual.Siguiente;
+                indice++;
+            }
         }
 
         /// <summary>Marca una celda como contagiada (fila y columna en base 1)</summary>
         public void MarcarContagiada(int fila, int columna)
         {
-            estado[fila - 1, columna - 1] = true;
+            EstablecerValor(fila - 1, columna - 1, true);
         }
 
-        public bool EstaContagiada(int fila, int columna)
+        /// <summary>Devuelve el estado de una celda (base 0) para Graphviz y dibujo</summary>
+        public bool ObtenerEstado(int fila, int columna)
         {
-            return estado[fila - 1, columna - 1];
+            return ObtenerValor(fila, columna);
         }
 
         private int ContarContagiadas()
         {
             int count = 0;
-            for (int f = 0; f < m; f++)
-                for (int c = 0; c < m; c++)
-                    if (estado[f, c]) count++;
+            Nodo<ListaEnlazada<bool>> nodoFila = filas.Cabeza;
+            while (nodoFila != null)
+            {
+                Nodo<bool> nodoCol = nodoFila.Dato.Cabeza;
+                while (nodoCol != null)
+                {
+                    if (nodoCol.Dato) count++;
+                    nodoCol = nodoCol.Siguiente;
+                }
+                nodoFila = nodoFila.Siguiente;
+            }
             return count;
         }
 
@@ -72,16 +127,16 @@ namespace IPC2_Proyecto1.Models
                     int nf = fila + df;
                     int nc = col + dc;
                     if (nf >= 0 && nf < m && nc >= 0 && nc < m)
-                        if (estado[nf, nc]) count++;
+                        if (ObtenerValor(nf, nc)) count++;
                 }
             }
             return count;
         }
 
         /// <summary>
-        /// Aplica las reglas de contagio y devuelve la nueva rejilla (siguiente período)
-        /// Regla 1: Contagiada con 2 o 3 vecinos contagiados → sigue contagiada
-        /// Regla 2: Sana con exactamente 3 vecinos contagiados → se contagia
+        /// Aplica las reglas de contagio y devuelve la nueva rejilla (siguiente período).
+        /// Regla 1: Contagiada con 2 o 3 vecinos → sigue contagiada
+        /// Regla 2: Sana con exactamente 3 vecinos → se contagia
         /// </summary>
         public Rejilla SiguientePeriodo()
         {
@@ -91,17 +146,19 @@ namespace IPC2_Proyecto1.Models
                 for (int c = 0; c < m; c++)
                 {
                     int vecinos = ContarVecinosContagiados(f, c);
-                    if (estado[f, c])
+                    bool actualContagiada = ObtenerValor(f, c);
+
+                    if (actualContagiada)
                     {
                         // Regla 1
                         if (vecinos == 2 || vecinos == 3)
-                            nueva.estado[f, c] = true;
+                            nueva.EstablecerValor(f, c, true);
                     }
                     else
                     {
                         // Regla 2
                         if (vecinos == 3)
-                            nueva.estado[f, c] = true;
+                            nueva.EstablecerValor(f, c, true);
                     }
                 }
             }
@@ -115,27 +172,28 @@ namespace IPC2_Proyecto1.Models
             CeldasContagiadas.Limpiar();
             for (int f = 0; f < m; f++)
                 for (int c = 0; c < m; c++)
-                    if (estado[f, c])
+                    if (ObtenerValor(f, c))
                         CeldasContagiadas.AgregarFinal(new Celda(f + 1, c + 1, true));
         }
 
         /// <summary>
         /// Genera una firma única del estado actual para comparar patrones.
-        /// Usa StringBuilder para no depender de estructuras nativas.
         /// </summary>
         public string ObtenerFirma()
         {
             StringBuilder sb = new StringBuilder();
-            for (int f = 0; f < m; f++)
-                for (int c = 0; c < m; c++)
-                    sb.Append(estado[f, c] ? '1' : '0');
+            Nodo<ListaEnlazada<bool>> nodoFila = filas.Cabeza;
+            while (nodoFila != null)
+            {
+                Nodo<bool> nodoCol = nodoFila.Dato.Cabeza;
+                while (nodoCol != null)
+                {
+                    sb.Append(nodoCol.Dato ? '1' : '0');
+                    nodoCol = nodoCol.Siguiente;
+                }
+                nodoFila = nodoFila.Siguiente;
+            }
             return sb.ToString();
-        }
-
-        /// <summary>Devuelve el estado interno para Graphviz</summary>
-        public bool ObtenerEstado(int fila, int columna)
-        {
-            return estado[fila, columna];
         }
     }
 }
