@@ -23,7 +23,7 @@ namespace IPC2_Proyecto1.Logic
             string rutaPng = Path.Combine(carpetaSalida, nombreBase + ".png");
 
             string contenidoDot = GenerarDot(paciente);
-            File.WriteAllText(rutaDot, contenidoDot, new UTF8Encoding(false));
+            File.WriteAllText(rutaDot, contenidoDot, new System.Text.UTF8Encoding(false));
             Console.WriteLine($"[OK] Archivo .dot generado: {rutaDot}");
 
             if (!File.Exists(RutaDot))

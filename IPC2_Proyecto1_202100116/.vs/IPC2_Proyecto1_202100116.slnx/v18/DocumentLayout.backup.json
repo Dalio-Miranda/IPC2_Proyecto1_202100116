@@ -7,12 +7,24 @@
       "RelativeMoniker": "D:0:0:{0D6C3B4E-0B03-B7A8-C371-48A00801A891}|IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116.csproj|solutionrelative:ipc2_proyecto1_202100116\\logic\\generadorgraphviz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{0D6C3B4E-0B03-B7A8-C371-48A00801A891}|IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116.csproj|c:\\users\\damg usac\\source\\repos\\ipc2_proyecto1_202100116\\ipc2_proyecto1_202100116\\ipc2_proyecto1_202100116\\models\\rejilla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D6C3B4E-0B03-B7A8-C371-48A00801A891}|IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116.csproj|solutionrelative:ipc2_proyecto1_202100116\\models\\rejilla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D6C3B4E-0B03-B7A8-C371-48A00801A891}|IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116.csproj|c:\\users\\damg usac\\source\\repos\\ipc2_proyecto1_202100116\\ipc2_proyecto1_202100116\\ipc2_proyecto1_202100116\\io\\escritorxml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D6C3B4E-0B03-B7A8-C371-48A00801A891}|IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116.csproj|solutionrelative:ipc2_proyecto1_202100116\\io\\escritorxml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0D6C3B4E-0B03-B7A8-C371-48A00801A891}|IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116.csproj|c:\\users\\damg usac\\source\\repos\\ipc2_proyecto1_202100116\\ipc2_proyecto1_202100116\\ipc2_proyecto1_202100116\\structures\\nodo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0D6C3B4E-0B03-B7A8-C371-48A00801A891}|IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116.csproj|solutionrelative:ipc2_proyecto1_202100116\\structures\\nodo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0D6C3B4E-0B03-B7A8-C371-48A00801A891}|IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116.csproj|c:\\users\\damg usac\\source\\repos\\ipc2_proyecto1_202100116\\ipc2_proyecto1_202100116\\ipc2_proyecto1_202100116\\models\\rejilla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D6C3B4E-0B03-B7A8-C371-48A00801A891}|IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116.csproj|solutionrelative:ipc2_proyecto1_202100116\\models\\rejilla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0D6C3B4E-0B03-B7A8-C371-48A00801A891}|IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116.csproj|c:\\users\\damg usac\\source\\repos\\ipc2_proyecto1_202100116\\ipc2_proyecto1_202100116\\ipc2_proyecto1_202100116\\io\\lectorxml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D6C3B4E-0B03-B7A8-C371-48A00801A891}|IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116.csproj|solutionrelative:ipc2_proyecto1_202100116\\io\\lectorxml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D6C3B4E-0B03-B7A8-C371-48A00801A891}|IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116.csproj|c:\\users\\damg usac\\source\\repos\\ipc2_proyecto1_202100116\\ipc2_proyecto1_202100116\\ipc2_proyecto1_202100116\\logic\\simulador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D6C3B4E-0B03-B7A8-C371-48A00801A891}|IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116.csproj|solutionrelative:ipc2_proyecto1_202100116\\logic\\simulador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0D6C3B4E-0B03-B7A8-C371-48A00801A891}|IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116.csproj|c:\\users\\damg usac\\source\\repos\\ipc2_proyecto1_202100116\\ipc2_proyecto1_202100116\\ipc2_proyecto1_202100116\\ipc2_proyecto1_202100116.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -30,8 +42,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LectorXML.cs",
+              "DocumentMoniker": "C:\\Users\\DAMG USAC\\source\\repos\\IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116\\IO\\LectorXML.cs",
+              "RelativeDocumentMoniker": "IPC2_Proyecto1_202100116\\IO\\LectorXML.cs",
+              "ToolTip": "C:\\Users\\DAMG USAC\\source\\repos\\IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116\\IO\\LectorXML.cs",
+              "RelativeToolTip": "IPC2_Proyecto1_202100116\\IO\\LectorXML.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAYwD4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T01:10:11.88Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EscritorXML.cs",
+              "DocumentMoniker": "C:\\Users\\DAMG USAC\\source\\repos\\IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116\\IO\\EscritorXML.cs",
+              "RelativeDocumentMoniker": "IPC2_Proyecto1_202100116\\IO\\EscritorXML.cs",
+              "ToolTip": "C:\\Users\\DAMG USAC\\source\\repos\\IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116\\IO\\EscritorXML.cs",
+              "RelativeToolTip": "IPC2_Proyecto1_202100116\\IO\\EscritorXML.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T01:10:02.117Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Simulador.cs",
+              "DocumentMoniker": "C:\\Users\\DAMG USAC\\source\\repos\\IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116\\Logic\\Simulador.cs",
+              "RelativeDocumentMoniker": "IPC2_Proyecto1_202100116\\Logic\\Simulador.cs",
+              "ToolTip": "C:\\Users\\DAMG USAC\\source\\repos\\IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116\\Logic\\Simulador.cs",
+              "RelativeToolTip": "IPC2_Proyecto1_202100116\\Logic\\Simulador.cs",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAiwIUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T01:09:26.948Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -40,14 +89,14 @@
               "RelativeDocumentMoniker": "IPC2_Proyecto1_202100116\\Logic\\GeneradorGraphviz.cs",
               "ToolTip": "C:\\Users\\DAMG USAC\\source\\repos\\IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116\\Logic\\GeneradorGraphviz.cs",
               "RelativeToolTip": "IPC2_Proyecto1_202100116\\Logic\\GeneradorGraphviz.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwCcAAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-04T03:24:45.308Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Nodo.cs",
               "DocumentMoniker": "C:\\Users\\DAMG USAC\\source\\repos\\IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116\\Structures\\Nodo.cs",
               "RelativeDocumentMoniker": "IPC2_Proyecto1_202100116\\Structures\\Nodo.cs",
@@ -60,7 +109,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\DAMG USAC\\source\\repos\\IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116\\Program.cs",
               "RelativeDocumentMoniker": "IPC2_Proyecto1_202100116\\Program.cs",
@@ -72,7 +121,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Rejilla.cs",
               "DocumentMoniker": "C:\\Users\\DAMG USAC\\source\\repos\\IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116\\Models\\Rejilla.cs",
               "RelativeDocumentMoniker": "IPC2_Proyecto1_202100116\\Models\\Rejilla.cs",
@@ -80,11 +129,12 @@
               "RelativeToolTip": "IPC2_Proyecto1_202100116\\Models\\Rejilla.cs",
               "ViewState": "AgIAAK0AAAAAAAAAAAAYwMYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-01T04:54:30.936Z"
+              "WhenOpened": "2026-03-01T04:54:30.936Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "IPC2_Proyecto1_202100116.csproj",
               "DocumentMoniker": "C:\\Users\\DAMG USAC\\source\\repos\\IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116.csproj",
               "RelativeDocumentMoniker": "IPC2_Proyecto1_202100116\\IPC2_Proyecto1_202100116.csproj",
